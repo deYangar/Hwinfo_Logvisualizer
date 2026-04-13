@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="zh-hans" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log Visualizer</title>
+    <meta
+      name="description"
+      content="Generate insightful charts from your HWiNFO64 logs to easily visualize and analyze system performance."
+    />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#171717"
+      media="(prefers-color-scheme: dark)"
+    />
+    <script>
+      try {
+        if (
+          localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      } catch {}
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+</head>
+  <body
+    class="text-neutral-700 antialiased selection:bg-orange-400 selection:text-white dark:bg-neutral-900 dark:text-neutral-300 dark:selection:bg-orange-400/90 dark:selection:text-white"
+  >
+    <div id="app" class="isolate"></div>
+  </body>
+</html>

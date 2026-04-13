@@ -1,0 +1,70 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    height: auto;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* 深色模式滚动条调色，完全继承默认宽度和箭头，只改颜色 */
+html.dark .sensor-scroll-container {
+  scrollbar-color: #737373 #262626;
+}
+html.dark .sensor-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #737373;
+  border-radius: 8px;
+}
+html.dark .sensor-scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #a3a3a3;
+}
+html.dark .sensor-scroll-container::-webkit-scrollbar-track {
+  background-color: #262626;
+}
+
+/* 全局深色滚动条 */
+html.dark {
+  scrollbar-color: #737373 #262626;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: #737373;
+  border-radius: 8px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #a3a3a3;
+}
+html.dark ::-webkit-scrollbar-track {
+  background-color: #262626;
+}
+
+/* 深色模式下复选框未勾选背景改为深色 */
+html.dark input[type="checkbox"] {
+  accent-color: #fb923c !important;
+  background-color: #262626 !important;
+  border-color: #525252 !important;
+}
+

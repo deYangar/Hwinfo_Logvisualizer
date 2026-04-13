@@ -1,0 +1,17 @@
+
+{
+  "name": "Log Visualizer",
+  "short_name": "LogVisualizer",
+  "description": "Generate insightful charts from your HWiNFO64 logs",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#171717",
+  "theme_color": "#171717",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "200x200",
+      "type": "image/svg+xml"
+    }
+  ]
+}
